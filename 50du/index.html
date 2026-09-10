@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50度灰app-官方正版下载指南与安全使用说明</title>
+    <meta name="description" content="提供50度灰app官方正版下载入口、版本功能介绍、设备兼容性说明与安全使用指南，帮助用户了解安装流程与常见问题，确保移动端体验顺畅无忧。">
+    <meta name="keywords" content="50度灰app,50度灰下载,50度灰安卓版,50度灰苹果版,移动应用指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #1f2d3d;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #2b3a4a;
+            color: #ffffff;
+            padding: 18px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: #4a90e2;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #fff;
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #d3dce6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        .hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary {
+            background: #4a90e2;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+        }
+        .btn-primary:hover {
+            background: #3a7bc8;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+        .btn-outline:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 36px;
+            color: #2c3e50;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #4a90e2;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .intro-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px 22px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            border-top: 3px solid #4a90e2;
+            transition: transform 0.2s;
+        }
+        .intro-card:hover {
+            transform: translateY(-4px);
+        }
+        .intro-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .intro-card p {
+            color: #5a6b7f;
+            font-size: 0.95rem;
+        }
+        .feature-list {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px 36px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .feature-item {
+            display: flex;
+            gap: 14px;
+        }
+        .feature-num {
+            background: #4a90e2;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+        .feature-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .feature-content p {
+            color: #5a6b7f;
+            font-size: 0.95rem;
+        }
+        .download-box {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 36px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .download-info h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 6px;
+        }
+        .download-info p {
+            color: #5a6b7f;
+        }
+        .download-badge {
+            background: #2b3a4a;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .compat-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+        .compat-item {
+            background: #ecf3fa;
+            color: #2c3e50;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 20px;
+        }
+        .step-card {
+            background: #f0f4f9;
+            border-radius: 14px;
+            padding: 26px 18px;
+            text-align: center;
+            border: 1px solid #e2e9f0;
+        }
+        .step-num {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: #4a90e2;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .step-card h4 {
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        .step-card p {
+            font-size: 0.9rem;
+            color: #5a6b7f;
+        }
+        .faq-section {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 34px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+        .faq-item {
+            border-bottom: 1px solid #e9eef3;
+            padding: 18px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-q::before {
+            content: "Q";
+            background: #4a90e2;
+            color: #fff;
+            border-radius: 6px;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-a {
+            color: #5a6b7f;
+            padding-left: 32px;
+            font-size: 0.95rem;
+        }
+        .tip-box {
+            background: #fff8e6;
+            border-left: 4px solid #f5b942;
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .tip-box strong {
+            color: #8a6d1a;
+        }
+        footer {
+            background: #2b3a4a;
+            color: #b8c4ce;
+            padding: 34px 0 20px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 24px;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .footer-col a {
+            color: #b8c4ce;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+            nav ul {
+                gap: 16px;
+                justify-content: center;
+            }
+            .download-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .feature-list {
+                padding: 24px 18px;
+            }
+            .faq-section {
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .btn-group {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo-area">
+            <div class="logo-icon">G</div>
+            <div class="logo-text">50度灰app</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro">应用简介</a></li>
+                <li><a href="#features">功能特点</a></li>
+                <li><a href="#download">下载方式</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>50度灰app 正版下载与安全使用指南</h1>
+        <p>提供清晰、可靠的安装指引与功能说明，帮助您快速在安卓或苹果设备上完成部署，并了解使用过程中的重要注意事项。</p>
+        <div class="btn-group">
+            <a href="#download" class="btn btn-primary">查看下载指南</a>
+            <a href="#features" class="btn btn-outline">探索核心功能</a>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- 应用简介 -->
+    <section class="section" id="intro">
+        <div class="container">
+            <h2 class="section-title">关于 50度灰app</h2>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <h3>应用定位</h3>
+                    <p>50度灰app 是一款面向移动端用户的工具类应用，其名称源于特定的视觉风格与界面主题。用户搜索该关键词通常是为了获取应用安装包或了解其功能特性。</p>
+                </div>
+                <div class="intro-card">
+                    <h3>合规说明</h3>
+                    <p>我们始终强调通过官方应用商店或开发者认证渠道获取应用，避免使用来源不明的安装包，以保障设备安全与个人隐私。</p>
+                </div>
+                <div class="intro-card">
+                    <h3>适用人群</h3>
+                    <p>适合追求个性化界面体验、需要特定功能辅助的成年用户。建议用户在下载前确认应用功能符合自身需求，并阅读权限说明。</p>
+                </div>
+                <div class="intro-card">
+                    <h3>平台支持</h3>
+                    <p>目前主要支持 Android 8.0 及以上版本和 iOS 12.0 及以上版本，不同版本的功能细节可能略有差异。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能特点 -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">核心功能与使用亮点</h2>
+            <div class="feature-list">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-num">1</div>
+                        <div class="feature-content">
+                            <h3>简洁界面设计</h3>
+                            <p>采用深色与灰色调和圆润控件，减少视觉疲劳，适合长时间使用。界面切换流畅，操作逻辑清晰。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">2</div>
+                        <div class="feature-content">
+                            <h3>个性化设置</h3>
+                            <p>支持调整主题色调、列表密度和通知偏好，让应用更贴合个人使用习惯。设置项分类明确，易于查找。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">3</div>
+                        <div class="feature-content">
+                            <h3>离线资源管理</h3>
+                            <p>内置下载管理器支持断点续传，可对已缓存内容进行归类整理，节省流量并提升访问速度。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">4</div>
+                        <div class="feature-content">
+                            <h3>隐私保护机制</h3>
+                            <p>提供应用锁、隐藏会话等可选功能，用户可自行开启。所有隐私设置均在本机完成，不强制上传数据。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">5</div>
+                        <div class="feature-content">
+                            <h3>轻量性能优化</h3>
+                            <p>安装包体积控制良好，后台内存占用经过优化，即使在配置较低的设备上也能保持响应速度。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">6</div>
+                        <div class="feature-content">
+                            <h3>多语言支持</h3>
+                            <p>除简体中文外，还支持繁体中文和英文界面，方便不同语言背景的用户使用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载与兼容 -->
+    <section class="section" id="download">
+        <div class="container">
+            <h2 class="section-title">下载方式与兼容性说明</h2>
+            <div class="download-box">
+                <div class="download-info">
+                    <h3>获取正版应用</h3>
+                    <p>建议优先通过各品牌手机自带的应用商店搜索“50度灰”进行下载。若商店未收录，请访问开发者官网或可信的第三方分发平台。</p>
+                    <div class="compat-list">
+                        <span class="compat-item">Android 8.0+</span>
+                        <span class="compat-item">iOS 12.0+</span>
+                        <span class="compat-item">支持深色模式</span>
+                        <span class="compat-item">需网络连接</span>
+                    </div>
+                </div>
+                <div class="download-badge">版本 v2.4.1 (稳定版)</div>
+            </div>
+            <div class="tip-box">
+                <strong>安全提醒：</strong> 切勿在非正规网站下载所谓的“破解版”或“无限金币版”，此类文件可能捆绑恶意代码。安装时请留意应用申请的权限是否与功能相关。
+            </div>
+            <h3 style="margin: 30px 0 18px; font-size: 1.3rem; color: #2c3e50;">标准安装步骤</h3>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>确认设备版本</h4>
+                    <p>进入手机“设置”查看系统版本是否满足要求，并预留至少 150MB 存储空间。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>获取安装包</h4>
+                    <p>在应用商店或官网下载 .apk (安卓) / .ipa (iOS) 文件，注意核对开发者名称。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>执行安装</h4>
+                    <p>安卓用户需允许“安装未知来源应用”，iOS 用户需在 Safari 中打开并点击安装描述文件。</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h4>首次启动配置</h4>
+                    <p>根据引导完成基础设置，建议先登录账号再同步数据，确保体验一致。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-q">为什么在应用商店搜不到“50度灰app”？</div>
+                    <div class="faq-a">部分应用因内容分类或地区政策限制，未在全部区域上架。您可以尝试使用不同的关键词（如“50度灰”+“工具”）搜索，或前往开发者官网查询下载链接。请勿使用企业签名的非法分发渠道。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">安装后闪退或无法打开怎么办？</div>
+                    <div class="faq-a">首先检查系统版本是否过低，然后尝试清除应用缓存（安卓）或卸载重装（iOS）。若问题依旧，可能是设备不兼容或安装包不完整，请重新从官方渠道下载。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">应用内的灰色主题可以完全关闭吗？</div>
+                    <div class="faq-a">可以。进入“设置”>“外观”，选择“明亮模式”即可切换为浅色背景。部分界面元素（如品牌图标）会保留灰色调，这是应用的设计基因。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">使用过程中需要注册账号吗？</div>
+                    <div class="faq-a">基础浏览功能无需注册。但若要使用云同步、收藏跨设备迁移或参与社区互动，则需要创建一个账号。账号仅用于数据同步，不会强制关联手机号。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何判断下载的安装包是否为正版？</div>
+                    <div class="faq-a">正版应用在安装时显示的数字签名与开发者名称一致，且安装包大小一般不超过 50MB。您也可以在应用内“关于”页面查看版本号和版权信息进行核对。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">应用支持平板设备吗？</div>
+                    <div class="faq-a">目前手机版和平板版界面已做自适应适配，但部分交互按钮在平板上会放大显示。推荐在 iPad 或安卓平板上使用横屏模式，可获得更佳视野。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>产品信息</h4>
+                <ul>
+                    <li>版本更新记录</li>
+                    <li>功能路线图</li>
+                    <li>开发者联系方式</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源中心</h4>
+                <ul>
+                    <li>用户使用手册</li>
+                    <li>界面截图预览</li>
+                    <li>常见问题索引</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>法律条款</h4>
+                <ul>
+                    <li>隐私政策</li>
+                    <li>用户协议</li>
+                    <li>免责声明</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li>官方微博</li>
+                    <li>微信公众号</li>
+                    <li>开发者社区</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 50度灰app指南站 · 本站仅提供信息参考，不直接提供安装包下载。请通过官方渠道获取应用。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
