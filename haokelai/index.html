@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豪客来电子优惠券-最新牛排优惠券领取与使用指南</title>
+    <meta name="description" content="豪客来电子优惠券频道，提供最新优惠券信息、领取方式、使用规则及常见问题解答，助您享受美味牛排的同时获得更多实惠。">
+    <meta name="keywords" content="豪客来电子优惠券,豪客来优惠券,豪客来牛排优惠,电子优惠券领取,豪客来券码">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 顶部提示条 */
+        .top-bar {
+            background: #3e2723;
+            color: #f5e6d3;
+            font-size: 13px;
+            padding: 8px 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .top-bar a {
+            color: #ffcc80;
+            text-decoration: underline;
+        }
+        /* 页眉 */
+        .site-header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            background: #b71c1c;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+        }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #3e2723;
+        }
+        .logo-text span {
+            color: #b71c1c;
+        }
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #4e342e;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover {
+            color: #b71c1c;
+        }
+        .nav-cta {
+            background: #b71c1c;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover {
+            background: #8e0000;
+        }
+        /* Hero 首屏 */
+        .hero {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 50%, #795548 100%);
+            color: #fff;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .hero-text h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .hero-text p {
+            font-size: 17px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+            max-width: 540px;
+        }
+        .hero-features {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+        .hero-feature svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffcc80;
+        }
+        .hero-coupon {
+            background: #fff;
+            color: #3e2723;
+            padding: 28px;
+            border-radius: 16px;
+            min-width: 300px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .hero-coupon h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .coupon-amount {
+            font-size: 48px;
+            font-weight: 800;
+            color: #b71c1c;
+            margin: 10px 0;
+        }
+        .coupon-desc {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 18px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #b71c1c;
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            background: #8e0000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(183,28,28,0.3);
+        }
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #b71c1c;
+            color: #b71c1c;
+            padding: 10px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            background: #b71c1c;
+            color: #fff;
+        }
+        /* 信息卡片 */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #3e2723;
+            margin-bottom: 8px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 15px;
+            margin-bottom: 36px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border-top: 4px solid #b71c1c;
+            transition: transform 0.2s;
+        }
+        .info-card:hover {
+            transform: translateY(-4px);
+        }
+        .info-card h3 {
+            font-size: 18px;
+            color: #3e2723;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card p {
+            color: #666;
+            font-size: 15px;
+        }
+        .card-icon {
+            font-size: 24px;
+        }
+        /* 优惠券领取步骤 */
+        .steps-section {
+            background: #fff;
+            border-top: 1px solid #f0e8e0;
+            border-bottom: 1px solid #f0e8e0;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 10px;
+        }
+        .step-item {
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: #3e2723;
+            color: #ffcc80;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .step-item h4 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #3e2723;
+        }
+        .step-item p {
+            font-size: 14px;
+            color: #777;
+        }
+        /* 优惠券列表 */
+        .coupon-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .coupon-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #eee;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .coupon-item:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+        .coupon-tag {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e65100;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .coupon-item h4 {
+            font-size: 18px;
+            color: #3e2723;
+            margin-bottom: 6px;
+        }
+        .coupon-item .valid-date {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 14px;
+        }
+        .coupon-item .btn-small {
+            background: #3e2723;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .coupon-item .btn-small:hover {
+            background: #b71c1c;
+        }
+        /* 使用规则 */
+        .rules-section {
+            background: #fff;
+        }
+        .rules-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .rules-list li {
+            margin-bottom: 14px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 15px;
+            color: #555;
+        }
+        .rules-list li::before {
+            content: "•";
+            color: #b71c1c;
+            font-size: 22px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+        /* FAQ */
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #b71c1c;
+        }
+        .faq-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #3e2723;
+        }
+        .faq-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        /* 小提示 */
+        .tips-box {
+            background: #fff8f0;
+            border: 1px dashed #e0c9a8;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+        .tips-box h4 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .tips-box ul {
+            padding-left: 20px;
+        }
+        .tips-box li {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #2d1b16;
+            color: #a1887f;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .footer-links a {
+            color: #d7ccc8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: #ffcc80;
+        }
+        .footer-copy {
+            text-align: center;
+            font-size: 13px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 14px;
+            }
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            .hero-coupon {
+                min-width: 100%;
+            }
+            .section {
+                padding: 36px 0;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <!-- 顶部提示 -->
+    <div class="top-bar">📢 豪客来电子优惠券不定期更新，建议收藏本站，方便随时查看最新优惠</div>
+
+    <!-- 页眉 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">豪</div>
+                <div class="logo-text">豪客来<span>优惠券</span></div>
+            </div>
+            <nav class="main-nav">
+                <a href="#">首页</a>
+                <a href="#coupons">优惠券中心</a>
+                <a href="#steps">领取步骤</a>
+                <a href="#rules">使用规则</a>
+                <a href="#faq">常见问题</a>
+                <a href="#tips">小贴士</a>
+                <a href="#" class="nav-cta">立即领券</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>豪客来电子优惠券<br>省心省钱享美味</h1>
+                <p>汇集豪客来牛排最新电子优惠券信息，为您整理领取入口、使用规则和注意事项。让每一次欢聚都更超值，每一口牛排都更尽兴。</p>
+                <div class="hero-features">
+                    <span class="hero-feature">✅ 官方渠道信息</span>
+                    <span class="hero-feature">✅ 实时更新</span>
+                    <span class="hero-feature">✅ 简单易用</span>
+                </div>
+                <p style="margin-top: 20px;">
+                    <a href="#coupons" class="btn-primary">查看优惠券</a>
+                    <a href="#steps" class="btn-outline" style="border-color:#ffcc80;color:#ffcc80;margin-left:10px;">如何领取</a>
+                </p>
+            </div>
+            <div class="hero-coupon">
+                <h3>限时福利</h3>
+                <div class="coupon-amount">¥50</div>
+                <div class="coupon-desc">满300元可用 | 堂食/外带通用</div>
+                <a href="#" class="btn-primary" style="width:100%;text-align:center;">立即领取</a>
+                <p style="font-size:12px;color:#aaa;margin-top:12px;">* 数量有限，领完即止</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 优惠券列表 -->
+    <section class="section" id="coupons">
+        <div class="container">
+            <h2 class="section-title">最新豪客来电子优惠券</h2>
+            <p class="section-subtitle">以下优惠券信息仅供参考，请以实际领取时的活动规则为准</p>
+            <div class="coupon-list">
+                <div class="coupon-item">
+                    <span class="coupon-tag">人气推荐</span>
+                    <h4>满200减30元</h4>
+                    <div class="valid-date">有效期：领取后30天内</div>
+                    <p style="font-size:14px;color:#888;margin-bottom:16px;">适用于全场牛排套餐，具体以门店说明为准。</p>
+                    <button class="btn-small">领取优惠券</button>
+                </div>
+                <div class="coupon-item">
+                    <span class="coupon-tag">新客专享</span>
+                    <h4>首单立减20元</h4>
+                    <div class="valid-date">有效期：注册后7天内</div>
+                    <p style="font-size:14px;color:#888;margin-bottom:16px;">首次通过官方小程序下单可使用，部分品类除外。</p>
+                    <button class="btn-small">领取优惠券</button>
+                </div>
+                <div class="coupon-item">
+                    <span class="coupon-tag">会员福利</span>
+                    <h4>满150减15元</h4>
+                    <div class="valid-date">有效期：每月1日更新</div>
+                    <p style="font-size:14px;color:#888;margin-bottom:16px;">会员日专享，可在会员中心领取。</p>
+                    <button class="btn-small">领取优惠券</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 领取步骤 -->
+    <section class="section steps-section" id="steps">
+        <div class="container">
+            <h2 class="section-title">电子优惠券领取步骤</h2>
+            <p class="section-subtitle">简单几步，轻松获得优惠</p>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>找到官方渠道</h4>
+                    <p>通过豪客来官方小程序、APP或门店扫码进入活动页面</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>登录账户</h4>
+                    <p>使用手机号登录，新用户需先注册</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>领取优惠券</h4>
+                    <p>在优惠券中心点击“领取”按钮，券自动存入账户</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>下单使用</h4>
+                    <p>结算时选择可用优惠券，系统自动抵扣</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用规则 -->
+    <section class="section rules-section" id="rules">
+        <div class="container">
+            <h2 class="section-title">电子优惠券使用规则</h2>
+            <p class="section-subtitle">了解规则，用得安心</p>
+            <ul class="rules-list">
+                <li>每张优惠券仅限使用一次，不可拆分、不找零、不兑换现金。</li>
+                <li>优惠券需在有效期内使用，过期自动失效，不予以延期。</li>
+                <li>部分优惠券仅限堂食或外带，请在使用前确认适用范围。</li>
+                <li>优惠券不可与其他活动叠加使用，具体以门店或平台说明为准。</li>
+                <li>如遇退单，优惠券退回规则请参考官方说明，一般情况下优惠券不予退回。</li>
+                <li>优惠券仅限本人账户使用，不得转赠或出售。</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 常见问题 FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题解答</h2>
+            <p class="section-subtitle">关于电子优惠券，您可能关心的问题</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>电子优惠券在哪里查看？</h4>
+                    <p>领取成功后，可在豪客来官方小程序或APP的“我的-优惠券”中查看所有已领取的优惠券及其有效期。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>为什么我领不到优惠券？</h4>
+                    <p>可能是活动名额已发放完毕，或者您的账户不符合活动参与条件（如新客专享、会员等级限制等）。建议关注后续活动。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>优惠券可以和其他折扣一起用吗？</h4>
+                    <p>一般情况下不可叠加使用。特殊活动期间可能会有例外，请以活动页面说明为准。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>到店可以使用电子优惠券吗？</h4>
+                    <p>支持到店使用的优惠券，在结账时向店员出示券码或告知手机号即可核销。具体请咨询门店工作人员。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>优惠券过期了还能恢复吗？</h4>
+                    <p>过期优惠券无法恢复使用，请在有效期内及时使用。建议领取后尽快规划用餐安排。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>如何获取更多优惠信息？</h4>
+                    <p>建议关注豪客来官方公众号、小程序推送，或注册成为会员，及时获取最新活动通知和专属福利。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 小贴士 -->
+    <section class="section" id="tips">
+        <div class="container">
+            <div class="tips-box">
+                <h4>💡 实用小贴士</h4>
+                <ul>
+                    <li>领取优惠券前，先查看使用门槛和有效期，避免浪费。</li>
+                    <li>节假日期间优惠活动较多，建议提前领取并预约用餐。</li>
+                    <li>关注官方渠道获取第一手优惠信息，避免错过限时福利。</li>
+                    <li>如遇优惠券无法使用，请及时联系官方客服核实处理。</li>
+                    <li>本页面仅提供信息参考，所有优惠活动最终解释权归豪客来品牌方所有。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">首页</a>
+                <a href="#coupons">优惠券中心</a>
+                <a href="#steps">领取步骤</a>
+                <a href="#rules">使用规则</a>
+                <a href="#faq">常见问题</a>
+                <a href="#">联系客服</a>
+            </div>
+            <div class="footer-copy">
+                <p>本站为豪客来电子优惠券信息分享平台，非官方站点。优惠活动相关内容请以豪客来官方渠道发布为准。</p>
+                <p style="margin-top:8px;">© 2024 豪客来优惠券指南 · 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
